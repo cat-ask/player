@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mp3 플레이어</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="player.js"></script>
+    <script src="PlayList.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-row">
+            <div id="player">
+                
+                <div class="info">
+                    <div class="audio-info">
+                        <div class="file-name">재생할 음악이 없습니다.</div>
+                    </div>
+                    <div class="time-info">
+                        <audio src=""></audio>
+                        <div class="curret-time">00:00:00</div>
+                        <div class="total-time">00:00:00</div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="bar"></div>
+                </div>
+
+                <div class="control">
+                    <div class="control-btn">
+                        <button id="play_btn">재생</button>
+                        <button id="stop_btn">정지</button>
+                    </div>
+                    <div class="mode-btn">
+                        <input type="radio" name = "repeat" value="0" checked> 반복없음
+                        <input type="radio" name = "repeat" value="1"> 한곡반복
+                        <input type="radio" name = "repeat" value="2"> 리스트반복
+                    </div>
+                </div>
+                <div id="visualizer">
+                    <canvas id="myCanvas"></canvas>
+                </div>
+            </div> 
+            <div id="playList">
+                <ul class="item-list">
+                </ul>
+                <div class="button-row">
+                    <button id="openDialog" class="btn">+</button>
+                    <input type="file" id="audioFile" multiple>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
