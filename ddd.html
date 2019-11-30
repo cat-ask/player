@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .test{
+            width:400px;
+            height:200px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+
+    </div>
+    <script>
+        let test = document.querySelector(".test");
+        test.addEventListener("drop",(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            console.log(e);
+        });
+        test.addEventListener("dragover",(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
